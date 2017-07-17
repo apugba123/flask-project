@@ -5,22 +5,10 @@ app = Flask(__name__)
 def index():
 	return render_template("index.html")
 
-@app.route('/mylinux')
-def mylinux():
-	return render_template('linux.html')
-
-@app.route('/mypython')
-def mypython():
-	return render_template('python.html')
 
 @app.route('/whereami')
 def whereami():
 	return "Koforidua"
-
-@app.route('/whoareyou')
-def whoareyou():
-	return "Becky"
-
 
 if __name__ == '__main__':
 	app.run(host="0.0.0.0")
